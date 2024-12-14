@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Богдан's Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Black screen animation -->
+    <div id="opening-animation"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>Богдан</h1>
+        <nav>
+            <button class="nav-button">Page 1</button>
+            <button class="nav-button">Page 2</button>
+            <button class="nav-button">Page 3</button>
+            <button class="nav-button">Page 4</button>
+            <button id="animateButton">Start Animation</button>
+
+            <script>
+                const button = document.getElementById('animateButton');
+        
+                button.addEventListener('click', () => {
+                    // Change button color during animation
+                    button.classList.add('active');
+        
+                    // Create image element
+                    const overlayImage = document.createElement('img');
+                    overlayImage.id = 'overlayImage';
+                    overlayImage.src = './images/ZelVel.jpg'; // Replace with your image URL
+                    document.body.appendChild(overlayImage);
+        
+                    // Start animation
+                    requestAnimationFrame(() => {
+                        overlayImage.style.transform = 'translateY(-50%) translateX(100vw)';
+                    });
+        
+                    // Remove image after animation
+                    setTimeout(() => {
+                        button.classList.remove('active');
+                        overlayImage.remove();
+                    }, 3000); // Match the duration of the animation
+                });
+            </script>            
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="intro">
+            <h2>Гаджети, змінивші світ</h2>
+        </section>
+        <section id="grid-container">
+            <!-- Dynamic grid of images -->
+            <div class="grid-item" 
+                 data-bg="images/HarvardMarkI.jpg" 
+                 data-year="1944" 
+                 data-title="Harvard Mark I" 
+                 data-description="Цей велетенський електромеханічний комп’ютер, довжиною понад 15 метрів, став першим кроком до автоматизації складних обчислень. Harvard Mark I використовувався для військових розрахунків під час Другої світової війни. Хоча його швидкість роботи була в мільйони разів меншою, ніж сучасних комп’ютерів, він проклав шлях до розвитку цифрових обчислювальних машин.">
+            </div>
+<!-- Second Grid Item -->
+<div class="grid-item" 
+data-bg="images/ibmpc.jpg" 
+data-year="1981" 
+data-title="IBM PC" 
+data-description="Поява IBM PC змінила уявлення про комп’ютери як про дорогі та спеціалізовані пристрої. Завдяки універсальній архітектурі, цей комп’ютер став доступним як для офісів, так і для домашнього використання. IBM PC також стимулював розробку операційних систем, програмного забезпечення і навіть комп’ютерних ігор.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/macintosh.webp" 
+data-year="1984" 
+data-title="IBM PC" 
+data-description="Apple зробила величезний прорив, коли представила Macintosh – перший комп’ютер із графічним інтерфейсом і мишкою. Його реклама на Супербоулі стала культовою, а сам пристрій заклав основу сучасного підходу до дизайну та зручності техніки.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/sonywalkman.jpg" 
+data-year="1979" 
+data-title="Sony Walkman" 
+data-description="До появи Walkman прослуховування музики було обмежене стаціонарними системами. Цей невеликий касетний плеєр зробив музику мобільною. Він дозволив людям слухати улюблені треки під час прогулянки, тренувань чи подорожей. Walkman став культовим символом 80-х, а фраза "переносна музика" отримала нове значення.">
+</div>
+        </section>
+        <section id="grid-container">
+            <!-- Dynamic grid of images -->
+            <div class="grid-item" 
+                 data-bg="images/ipod.jpg" 
+                 data-year="2001" 
+                 data-title="Apple Ipod" 
+                 data-description="У світі, де панували компакт-диски, iPod запропонував щось нове – можливість зберігати до тисячі пісень у кишені. Зручний інтерфейс, компактний дизайн і інтеграція з iTunes зробили цей пристрій справжнім хітом. Він став попередником сучасних потокових платформ і перевизначив, як ми споживаємо медіа.">
+            </div>
+<!-- Second Grid Item -->
+<div class="grid-item" 
+data-bg="images/motorola.webp" 
+data-year="1983" 
+data-title="Motorola" 
+data-description="Перша мобілка, яка важила майже як цеглина, коштувала 3995 доларів і мала акумулятор, який працював лише 30 хвилин. Хоча це здається примітивним, DynaTAC відкрив шлях для мобільного зв’язку, зробивши мрію про спілкування "на ходу" реальністю. Він став символом престижу в 80-х.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/xbox.jpg" 
+data-year="2001" 
+data-title="Microsoft Xbox" 
+data-description=" Xbox став першою консоллю, яка серйозно змагалася із Sony PlayStation. Її потужний процесор та сервіс Xbox Live заклали основу для сучасного багатокористувацького онлайн-геймінгу, який сьогодні став невід'ємною частиною культури ігор.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/PalmPilot.jpg" 
+data-year="1996" 
+data-title="PalmP ilot" 
+data-description="До появи смартфонів, PalmPilot був першим справді популярним кишеньковим комп’ютером. Він пропонував функції, як-от адресна книга, календар і електронна пошта, що зробило його ідеальним помічником для бізнесменів.">
+</div>
+        </section>
+        <section id="grid-container">
+            <!-- Dynamic grid of images -->
+            <div class="grid-item" 
+                 data-bg="images/motorolla.jpg" 
+                 data-year="2004" 
+                 data-title="Motorola RAZR V3" 
+                 data-description="Цей телефон став культовим не лише завдяки своїм характеристикам, а й через стильний дизайн. Його тонкий корпус і металеве оздоблення зробили його "must-have" гаджетом для мільйонів користувачів по всьому світу.">
+            </div>
+<!-- Second Grid Item -->
+<div class="grid-item" 
+data-bg="images/ipad.webp" 
+data-year="2010" 
+data-title="Apple iPad" 
+data-description="Планшет, який зруйнував бар’єр між ноутбуками та смартфонами. Зручний для навчання, перегляду відео та читання, iPad став універсальним інструментом для всіх поколінь.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/echo.jpg" 
+data-year="2014" 
+data-title="Amazon Echo" 
+data-description="Поява Amazon Echo із вбудованим голосовим асистентом Alexa відкрила нову еру "розумних" пристроїв. Ця колонка дозволяє керувати музикою, запитувати погоду, налаштовувати нагадування та контролювати інші пристрої вдома за допомогою голосу.">
+</div>
+
+<div class="grid-item" 
+data-bg="images/oculus.webp" 
+data-year="2016" 
+data-title="VR Oculus Rift" 
+data-description="Віртуальна реальність перестала бути фантастикою. Oculus Rift дозволив гравцям повністю зануритися у віртуальний світ. Цей пристрій також використовується в освіті, медицині та архітектурі.">
+</div>
+        </section>
+        <section id="grid-container">
+            <!-- Dynamic grid of images -->
+            <div class="grid-item" 
+                 data-bg="images/Vision.jpg" 
+                 data-year="2023" 
+                 data-title="Apple Vision Pro" 
+                 data-description="Поєднуючи доповнену та віртуальну реальність, Vision Pro відкриває нові горизонти у використанні технологій для роботи, навчання та розваг.">
+            </div>
+<!-- Second Grid Item -->
+<div class="grid-item" 
+data-bg="images/cat1.jpg" 
+data-year="" 
+data-title="" 
+data-description="">
+</div>
+
+<div class="grid-item" 
+data-bg="images/zellat.jpg" 
+data-year="" 
+data-title="" 
+data-description="">
+</div>
+
+<div class="grid-item" 
+data-bg="images/zelvel.jpg" 
+data-year="" 
+data-title="" 
+data-description="">
+</div>
+        </section>
+
+
+    </main>
+
+<!-- Popup Modal -->
+<div id="popup-modal">
+    <div class="popup-content">
+        <div class="popup-header">
+            <span id="popup-year"></span> <!-- Year will go here -->
+            <h2 id="popup-title"></h2> <!-- Title will go here -->
+        </div>
+        <p id="popup-description"></p> <!-- Description will go here -->
+        <span class="close-button">&times;</span>
+    </div>
+</div>
+<script src="scripts.js"></script>
+<script src="scr1.js"></script>
+
+</body>
+</html>
